@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Superior Universitario - Licenciatura en Enfermería</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de color de Tailwind para replicar el esquema del diseño -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#003366', // Azul oscuro institucional
+                        'secondary-blue': '#004c99', // Azul medio
+                        'tertiary-blue': '#007bff', // Azul brillante (para detalles)
+                        'orange-accent': '#FF4500', // Naranja vibrante para el semestre 1
+                        'blue-1': '#336699', // Azul para el semestre 2
+                        'blue-2': '#007BFF', // Azul para el semestre 3
+                        'blue-3': '#004C99', // Azul para el semestre 4
+                        'blue-4': '#6699CC', // Azul para el semestre 5
+                        'orange-2': '#FF9933', // Naranja para el semestre 6
+                        'blue-5': '#336699', // Azul para el semestre 7
+                        'blue-6': '#6699CC', // Azul para el semestre 8
+                        'green-form': '#6AA84F', // Verde para el botón de formulario
+                        'gray-footer': '#cecece', // Gris claro nuevo
+                        'campus-blue': '#3d5fd4',
+                        // Nuevos colores
+                        'banner-main-blue': '#004482',
+                        'banner-accent-teal': '#00949c',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para la tipografía y el fondo del encabezado */
+        .hero-title {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .header-bg {
+            /* Simulación del fondo con la imagen de la enfermera y el banner */
+            background-image: url('https://placehold.co/1200x500/003366/ffffff?text=Fondo+Instituto+Universitario');
+            background-size: cover;
+            background-position: center top;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .header-top {
+            width: 100%;
+            padding-top: 0;
+            z-index: 10;
+        }
+        /* Contenedor del banner de Licenciatura */
+        .banner-container {
+            position: absolute;
+            bottom: 30px; 
+            left: 50%;
+            transform: translateX(-50%); 
+            width: 90%; 
+            max-width: 800px; 
+            opacity: 1; 
+            /* BORDES AJUSTADOS a 1.5rem */
+            border-radius: 0 !important;
+            border-bottom-right-radius: 1.5rem !important; /* APLICANDO 1.5REM */
+            
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+            display: flex; 
+            overflow: hidden; 
+            height: fit-content;
+        }
+        .banner-accent-bar {
+            background-color: #00949c; /* Azul teal */
+            width: 15%; 
+            min-width: 20px;
+            flex-shrink: 0;
+            /* Asegurar que las esquinas superiores e inferiores izquierdas sean rectas */
+            border-radius: 0 !important;
+        }
+        .banner-content {
+            /* Fondo azul marino con opacidad */
+            background-color: rgba(0, 68, 130, 0.85); /* #004482 @ 85% opacity */
+            padding: 1.5rem 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            /* Asegurar que las esquinas superiores derecha y inferior derecha sean rectas */
+            border-radius: 0 !important;
+            border-bottom-right-radius: 1.5rem !important; /* APLICANDO 1.5REM */
+        }
+        @media (min-width: 640px) {
+            .banner-container {
+                width: 75%;
+                bottom: 40px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .banner-container {
+                width: 60%;
+                bottom: 50px;
+            }
+        }
+        @media (min-width: 768px) {
+            .banner-accent-bar {
+                width: 5%;
+            }
+        }
+
+        /* ESTILOS DE SEMESTRE REVERTIDOS A REDONDEO GENERAL PARA EVITAR CONFLICTOS */
+        .semestre-card {
+            border-radius: 0.5rem !important; /* Volver al redondeo original para los semestres */
+        }
+        .semestre-content-box {
+            border-radius: 0 !important; 
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-gray-800">
+
+    <!-- Encabezado y Banner Principal -->
+    <header class="header-bg h-[50vh] sm:h-[60vh] lg:h-[70vh] relative shadow-xl">
+        
+        <!-- Contenedor del Logo, Nombre y Campus Info (Apilados) -->
+        <div class="header-top">
+            
+            <!-- Fila 1: Logo y Nombre de la Universidad (3 piezas) - Centrado en todas las pantallas -->
+            <div class="flex items-start sm:items-center justify-center space-x-3 sm:space-x-2 pb-1 text-white hero-title pt-4">
+                <!-- Logo ISUAN -->
+                <img src="https://placehold.co/40x40/003366/ffffff?text=I" alt="Logo ISUAN" class="h-10 w-10 rounded-full bg-white p-1 flex-shrink-0">
+                
+                <!-- Nombre de la Universidad -->
+                <div class="text-xs sm:text-sm font-bold leading-tight uppercase">
+                    <p>INSTITUTO</p>
+                    <p>SUPERIOR</p>
+                    <p>UNIVERSITARIO</p>
+                </div>
+            </div>
+            
+            <!-- Campus Info Bar -->
+            <div class="w-full text-center text-[10px] sm:text-xs py-2 bg-[--campus-blue] text-white font-semibold" style="--campus-blue: #3d5fd4;">
+                Campus de centro de trabajo: Chiapa de Corzo, clave: 07PPL2420E, C.V.E. DSP 4500Z
+            </div>
+        </div>
+
+        <!-- Banner de Título de la Licenciatura (BORDES AJUSTADOS A 1.5REM) -->
+        <div class="banner-container">
+            <!-- Barra Vertical de Acento (Teal) -->
+            <div class="banner-accent-bar"></div>
+            
+            <!-- Contenido del Banner (Azul Marino con 85% Opacidad) -->
+            <div class="banner-content">
+                <h1 class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-white hero-title uppercase tracking-wide text-left">
+                    LICENCIATURA EN ENFERMERÍA.
+                </h1>
+                <p class="text-sm sm:text-xl text-white font-medium mt-1 hero-title text-left">
+                    R.V.O.E. FEDERAL / 2022-2023
+                </p>
+                <p class="text-xs sm:text-lg text-white font-light mt-1 hero-title text-left">
+                    INICIO DE CICLO / FEBRERO 2026
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Plan de Estudios por Semestre -->
+    <main class="container mx-auto p-4 sm:p-8 lg:p-12 space-y-8">
+
+        <!-- Semestre 1 - Diseño interno estándar y ancho 50% -->
+        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+            <!-- Bloque de Número y Título (Ancho 50%) -->
+            <div class="flex-shrink-0 bg-orange-accent flex flex-row lg:flex-col items-center justify-center 
+                        p-4 sm:p-6 lg:p-8 w-full 
+                        lg:w-1/2 semestre-content-box"> 
+                <!-- Número (Grande, centrado) -->
+                <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">1</div>
+                <!-- Título (Centrado, una sola línea) -->
+                <div class="text-white text-base sm:text-lg font-bold text-center px-2">
+                    PRIMER SEMESTRE.
+                </div>
+            </div>
+            <!-- Contenido del Semestre (Ancho 50%) -->
+            <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
+                <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                    <li>Legislación en Enfermería.</li>
+                    <li>Sociología de la Salud.</li>
+                    <li>Bioquímica y Nutrición.</li>
+                    <li>Comunicación en el área de la salud.</li>
+                    <li>Filosofía de la Enfermería.</li>
+                    <li>Psicología y Desarrollo de la Persona.</li>
+                    <li>Anatomía y Fisiología I.</li>
+                    <li>Inglés I.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Semestre 2 - SIN CAMBIOS (Tiene Imagen) -->
+        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+            <div class="lg:w-1/3 flex-shrink-0 semestre-img-box">
+                <img src="https://placehold.co/400x200/CCCCCC/333333?text=Imagen+Semestre+2" 
+                     alt="Estudiante de enfermería en prácticas" 
+                     class="w-full h-40 lg:h-full object-cover semestre-img-box"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=Foto+del+Semestre+2';">
+            </div>
+            <div class="lg:w-2/3 flex flex-col lg:flex-row">
+                <div class="flex-shrink-0 bg-blue-1 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
+                            lg:w-48 xl:w-56 semestre-content-box">
+                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">2</div>
+                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
+                        SEGUNDO SEMESTRE.
+                    </div>
+                </div>
+                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-auto semestre-content-box right-content">
+                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                        <li>Fundamentos de Enfermería.</li>
+                        <li>Historia de la Enfermería en México.</li>
+                        <li>Desarrollo Humano Integral.</li>
+                        <li>Epidemiología y Saneamiento de la Salud.</li>
+                        <li>Anatomía y Fisiología II.</li>
+                        <li>Inglés II.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Semestre 3 - ANCHO 50% (Sin Imagen) -->
+        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+            <div class="lg:w-full flex flex-col lg:flex-row-reverse">
+                <!-- Bloque Color 50% -->
+                <div class="flex-shrink-0 bg-blue-2 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
+                            lg:w-1/2 semestre-content-box">
+                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">3</div>
+                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
+                        TERCER SEMESTRE.
+                    </div>
+                </div>
+                <!-- Contenido 50% -->
+                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
+                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                        <li>Estrategias para el Diseño de Intervenciones de Enfermería.</li>
+                        <li>Enfermería Clínica.</li>
+                        <li>Medicina Preventiva y Curativa.</li>
+                        <li>Farmacología.</li>
+                        <li>Biología y Fisiología.</li>
+                        <li>Inglés III.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Semestre 4 - SIN CAMBIOS (Tiene Imagen) -->
+        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+            <div class="lg:w-1/3 flex-shrink-0 semestre-img-box">
+                <img src="https://placehold.co/400x200/CCCCCC/333333?text=Imagen+Semestre+4" 
+                     alt="Enfermera sonriendo en un entorno médico" 
+                     class="w-full h-40 lg:h-full object-cover semestre-img-box"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=Foto+del+Semestre+4';">
+            </div>
+            <div class="lg:w-2/3 flex flex-col lg:flex-row">
+                <div class="flex-shrink-0 bg-blue-3 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
+                            lg:w-48 xl:w-56 semestre-content-box">
+                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">4</div>
+                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
+                        CUARTO SEMESTRE.
+                    </div>
+                </div>
+                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-auto semestre-content-box right-content">
+                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                        <li>Educación para la Salud.</li>
+                        <li>Enfermería de la Mujer.</li>
+                        <li>Enfermería Materno-Neonatal.</li>
+                        <li>Salud Mental.</li>
+                        <li>Inglés IV.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Semestre 5 - ANCHO 50% (Sin Imagen) -->
+        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+            <div class="lg:w-full flex flex-col lg:flex-row-reverse">
+                <!-- Bloque Color 50% -->
+                <div class="flex-shrink-0 bg-blue-4 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
+                            lg:w-1/2 semestre-content-box"> 
+                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">5</div>
+                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
+                        QUINTO SEMESTRE.
+                    </div>
+                </div>
+                <!-- Contenido 50% -->
+                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
+                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                        <li>Terapéutica para el Cuidado Holístico.</li>
+                        <li>Enfermería Pediátrica.</li>
+                        <li>Medicina de Urgencias.</li>
+                        <li>Enfermería de la Niñez y la Adolescencia.</li>
+                        <li>Lenguas Indígenas Indígena Tzeltal I.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Semestre 6 - SIN CAMBIOS (Tiene Imagen) -->
+        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+            <div class="lg:w-1/3 flex-shrink-0 semestre-img-box">
+                <img src="https://placehold.co/400x200/CCCCCC/333333?text=Imagen+Semestre+6" 
+                     alt="Enfermera revisando documentos" 
+                     class="w-full h-40 lg:h-full object-cover semestre-img-box"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=Foto+del+Semestre+6';">
+            </div>
+            <div class="lg:w-2/3 flex flex-col lg:flex-row">
+                <div class="flex-shrink-0 bg-orange-2 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
+                            lg:w-48 xl:w-56 semestre-content-box">
+                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">6</div>
+                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
+                        SEXTO SEMESTRE.
+                    </div>
+                </div>
+                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-auto semestre-content-box right-content">
+                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                        <li>Enfermería Médico Quirúrgica.</li>
+                        <li>Enfermería del Adulto y el Adulto Mayor.</li>
+                        <li>Deontología en los Servicios de Salud y Enfermería.</li>
+                        <li>Gerencia de los Servicios de Salud.</li>
+                        <li>Lenguas Indígenas Indígena Tzotzil I.</li>
+                        <li>Lenguas Indígenas Indígena Tzeltal II.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Semestre 7 - ANCHO 50% (Sin Imagen) -->
+        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+            <div class="lg:w-full flex flex-col lg:flex-row-reverse">
+                <!-- Bloque Color 50% -->
+                <div class="flex-shrink-0 bg-blue-5 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
+                            lg:w-1/2 semestre-content-box">
+                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">7</div>
+                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
+                        SÉPTIMO SEMESTRE.
+                    </div>
+                </div>
+                <!-- Contenido 50% -->
+                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
+                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                        <li>Gestión del Cuidado.</li>
+                        <li>Enfermería Tanatológica.</li>
+                        <li>Enfermería Geriátrica.</li>
+                        <li>Enfermería Comunitaria y Cualitativa en Enfermería.</li>
+                        <li>Lenguas Indígenas Indígena Tzotzil II.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Semestre 8 - SIN CAMBIOS (Tiene Imagen) -->
+        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+            <div class="lg:w-1/3 flex-shrink-0 semestre-img-box">
+                <img src="https://placehold.co/400x200/CCCCCC/333333?text=Imagen+Semestre+8" 
+                     alt="Joven estudiante en el campus" 
+                     class="w-full h-40 lg:h-full object-cover semestre-img-box"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=Foto+del+Semestre+8';">
+            </div>
+            <div class="lg:w-2/3 flex flex-col lg:flex-row">
+                <div class="flex-shrink-0 bg-blue-6 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
+                            lg:w-48 xl:w-56 semestre-content-box">
+                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">8</div>
+                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
+                        OCTAVO SEMESTRE.
+                    </div>
+                </div>
+                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-auto semestre-content-box right-content">
+                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                        <li>Enfermería Comunitaria.</li>
+                        <li>Gerencia Salud y Enfermería.</li>
+                        <li>Administración en la Investigación Clínica y Enfermería.</li>
+                        <li>Seminario de Titulación.</li>
+                        <li>Lenguas Indígenas Indígena Tzotzil II.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Formulario de Contacto -->
+        <section id="formulario" class="bg-white p-6 sm:p-10 rounded-xl shadow-2xl border border-primary-blue/20">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-blue mb-6 text-center">
+                Regístrate para Recibir Información
+            </h2>
+            <form action="#" method="POST" class="space-y-6">
+                <!-- Nombre Completo -->
+                <div>
+                    <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required
+                           class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary-blue focus:border-secondary-blue transition duration-150"
+                           placeholder="Ingresa tu nombre completo">
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required
+                           class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary-blue focus:border-secondary-blue transition duration-150"
+                           placeholder="ejemplo@correo.com">
+                </div>
+
+                <!-- Teléfono / WhatsApp -->
+                <div>
+                    <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono / WhatsApp</label>
+                    <input type="tel" id="telefono" name="telefono" required
+                           class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary-blue focus:border-secondary-blue transition duration-150"
+                           placeholder="Ingresa tu número de contacto">
+                </div>
+
+                <!-- Mensaje / Comentario -->
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje / Comentario (Opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"
+                              class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary-blue focus:border-secondary-blue transition duration-150"
+                              placeholder="¿Alguna pregunta específica sobre la licenciatura?"></textarea>
+                </div>
+
+                <!-- Botón de Enviar (mismo estilo que el original) -->
+                <div>
+                    <button type="submit" class="w-full bg-green-form text-white font-bold py-4 rounded-xl shadow-lg hover:bg-opacity-90 transition duration-300 text-xl tracking-wider uppercase focus:outline-none focus:ring-4 focus:ring-green-form focus:ring-opacity-50">
+                        Enviar Registro
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-gray-footer text-center p-4 sm:p-6 text-sm sm:text-base text-gray-700">
+        <p class="font-semibold">3a. Oriente Norte 840.</p>
+        <p>Col. Centro, Tuxtla Gutiérrez, Chiapas.</p>
+        <p class="mt-2">
+            <span class="font-semibold">admisisiones@isan.mx</span> / 
+            <span class="font-semibold">WhatsApp</span> +9611389301 / 
+            <span class="font-semibold">Lic. Julissa Gordillo</span>
+        </p>
+
+        <!-- Nueva sección de atribución y logo -->
+        <div class="mt-4 pt-4 border-t border-gray-400">
+            <p class="text-xs font-semibold mb-2">Realizado por:</p>
+            <a href="#" target="_blank" class="inline-block">
+                <!-- Placeholder para el logotipo -->
+                <img src="https://placehold.co/100x30/cecece/000000?text=Logo+Web" alt="GioDev" class="h-8">
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
