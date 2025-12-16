@@ -121,6 +121,24 @@
         .semestre-content-box {
             border-radius: 0 !important; 
         }
+        /* Clase para el contenedor de la imagen del semestre */
+        .semester-image-container {
+            border-radius: 0 !important;
+            /* Establece una altura fija o mínima para el contenedor de la imagen en LG para coherencia */
+            height: 150px; 
+        }
+        @media (min-width: 1024px) {
+            .semester-image-container {
+                height: 100%; 
+            }
+        }
+        /* Clase para la imagen misma */
+        .semester-image {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             border-radius: 0 !important;
+        }
     </style>
 </head>
 <body class="font-sans bg-white text-gray-800">
@@ -173,7 +191,7 @@
     <!-- Sección de Plan de Estudios por Semestre -->
     <main class="container mx-auto p-4 sm:p-8 lg:p-12 space-y-8">
 
-        <!-- Semestre 1 - Diseño interno estándar y ancho 50% -->
+        <!-- Semestre 1 - Diseño interno estándar y ancho 50% (Sin Imagen) -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
             <!-- Bloque de Número y Título (Ancho 50%) -->
             <div class="flex-shrink-0 bg-orange-accent flex flex-row lg:flex-col items-center justify-center 
@@ -201,13 +219,15 @@
             </div>
         </div>
 
-        <!-- Semestre 2 - SIN CAMBIOS (Tiene Imagen) -->
+        <!-- Semestre 2 - MODIFICADO: Contenedor y clases para fácil reemplazo de imagen -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-1/3 flex-shrink-0 semestre-img-box">
-                <img src="https://placehold.co/400x200/CCCCCC/333333?text=Imagen+Semestre+2" 
+            <!-- Contenedor de Imagen -->
+            <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
+                <!-- Por favor, reemplace la URL del src con la imagen deseada (idealmente 400x200 o similar) -->
+                <img src="https://placehold.co/400x200/CCCCCC/333333?text=IMAGEN+SEMESTRE+2" 
                      alt="Estudiante de enfermería en prácticas" 
-                     class="w-full h-40 lg:h-full object-cover semestre-img-box"
-                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=Foto+del+Semestre+2';">
+                     class="semester-image"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=FOTO+REEMPLAZO';">
             </div>
             <div class="lg:w-2/3 flex flex-col lg:flex-row">
                 <div class="flex-shrink-0 bg-blue-1 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
@@ -255,13 +275,15 @@
             </div>
         </div>
 
-        <!-- Semestre 4 - SIN CAMBIOS (Tiene Imagen) -->
+        <!-- Semestre 4 - MODIFICADO: Contenedor y clases para fácil reemplazo de imagen -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-1/3 flex-shrink-0 semestre-img-box">
-                <img src="https://placehold.co/400x200/CCCCCC/333333?text=Imagen+Semestre+4" 
+            <!-- Contenedor de Imagen -->
+            <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
+                <!-- Por favor, reemplace la URL del src con la imagen deseada (idealmente 400x200 o similar) -->
+                <img src="https://placehold.co/400x200/CCCCCC/333333?text=IMAGEN+SEMESTRE+4" 
                      alt="Enfermera sonriendo en un entorno médico" 
-                     class="w-full h-40 lg:h-full object-cover semestre-img-box"
-                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=Foto+del+Semestre+4';">
+                     class="semester-image"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=FOTO+REEMPLAZO';">
             </div>
             <div class="lg:w-2/3 flex flex-col lg:flex-row">
                 <div class="flex-shrink-0 bg-blue-3 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
@@ -307,13 +329,15 @@
             </div>
         </div>
 
-        <!-- Semestre 6 - SIN CAMBIOS (Tiene Imagen) -->
+        <!-- Semestre 6 - MODIFICADO: Contenedor y clases para fácil reemplazo de imagen -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-1/3 flex-shrink-0 semestre-img-box">
-                <img src="https://placehold.co/400x200/CCCCCC/333333?text=Imagen+Semestre+6" 
+            <!-- Contenedor de Imagen -->
+            <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
+                <!-- Por favor, reemplace la URL del src con la imagen deseada (idealmente 400x200 o similar) -->
+                <img src="https://placehold.co/400x200/CCCCCC/333333?text=IMAGEN+SEMESTRE+6" 
                      alt="Enfermera revisando documentos" 
-                     class="w-full h-40 lg:h-full object-cover semestre-img-box"
-                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=Foto+del+Semestre+6';">
+                     class="semester-image"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=FOTO+REEMPLAZO';">
             </div>
             <div class="lg:w-2/3 flex flex-col lg:flex-row">
                 <div class="flex-shrink-0 bg-orange-2 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
@@ -360,13 +384,15 @@
             </div>
         </div>
 
-        <!-- Semestre 8 - SIN CAMBIOS (Tiene Imagen) -->
+        <!-- Semestre 8 - MODIFICADO: Contenedor y clases para fácil reemplazo de imagen -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-1/3 flex-shrink-0 semestre-img-box">
-                <img src="https://placehold.co/400x200/CCCCCC/333333?text=Imagen+Semestre+8" 
+            <!-- Contenedor de Imagen -->
+            <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
+                <!-- Por favor, reemplace la URL del src con la imagen deseada (idealmente 400x200 o similar) -->
+                <img src="https://placehold.co/400x200/CCCCCC/333333?text=IMAGEN+SEMESTRE+8" 
                      alt="Joven estudiante en el campus" 
-                     class="w-full h-40 lg:h-full object-cover semestre-img-box"
-                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=Foto+del+Semestre+8';">
+                     class="semester-image"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=FOTO+REEMPLAZO';">
             </div>
             <div class="lg:w-2/3 flex flex-col lg:flex-row">
                 <div class="flex-shrink-0 bg-blue-6 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
@@ -442,8 +468,12 @@
         <p class="font-semibold">3a. Oriente Norte 840.</p>
         <p>Col. Centro, Tuxtla Gutiérrez, Chiapas.</p>
         <p class="mt-2">
-            <span class="font-semibold" url="mailto:admisiones@isan.mx">admisiones@isan.mx</span> / 
-            <span class="font-semibold">WhatsApp</span> +9611389301 / 
+            <!-- Email con mailto: -->
+            <a href="mailto:admisiones@isan.mx" class="font-semibold text-gray-700 hover:text-primary-blue transition duration-150">admisiones@isan.mx</a> / 
+            
+            <!-- WhatsApp listo para enlace (usa la URL de WhatsApp con el número 52 + 9611389301) -->
+            <a href="https://wa.me/529611389301" target="_blank" class="font-semibold text-gray-700 hover:text-primary-blue transition duration-150">WhatsApp +9611389301</a> / 
+            
             <span class="font-semibold">Lic. Julissa Gordillo</span>
         </p>
 
@@ -452,7 +482,7 @@
             <p class="text-xs font-semibold mb-2">Realizado por:</p>
             <a href="#" target="_blank" class="inline-block">
                 <!-- Placeholder para el logotipo -->
-                <img src="https://placehold.co/100x30/cecece/000000?text=Logo+Web" alt="GioDev" class="h-8">
+                <img src="https://placehold.co/100x30/cecece/000000?text=Logo+Web" alt="Logo de la empresa de desarrollo web" class="h-8">
             </a>
         </div>
     </footer>
