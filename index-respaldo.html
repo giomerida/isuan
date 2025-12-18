@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Alexis Giovanni Mérida Arévalo - Giodev">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Superior Universitario - Licenciatura en Enfermería</title>
     <!-- Carga de Tailwind CSS -->
@@ -152,18 +153,19 @@
             <!-- Fila 1: Logo y Nombre de la Universidad (3 piezas) - Centrado en todas las pantallas -->
             <div class="flex items-start sm:items-center justify-center space-x-3 sm:space-x-2 pb-1 text-white hero-title pt-4">
                 <!-- Logo ISUAN -->
-                <img src="https://placehold.co/40x40/003366/ffffff?text=I" alt="Logo ISUAN" class="h-10 w-10 rounded-full bg-white p-1 flex-shrink-0">
+                <img src="img/logo amado nervo.png" alt="Logo ISUAN" width="60" height="60" class="w-12 h-12 sm:w-16 sm:h-16 object-contain"/>
                 
                 <!-- Nombre de la Universidad -->
                 <div class="text-xs sm:text-sm font-bold leading-tight uppercase">
                     <p>INSTITUTO</p>
                     <p>SUPERIOR</p>
                     <p>UNIVERSITARIO</p>
+                    <p>AMADO NERVO</p>
                 </div>
             </div>
             
             <!-- Campus Info Bar -->
-            <div class="w-full text-center text-[10px] sm:text-xs py-2 bg-[--campus-blue] text-white font-semibold" style="--campus-blue: #3d5fd4;">
+            <div class="w-full text-center text-[12px] sm:text-xs py-2 bg-[--campus-blue] text-white font-semibold" style="--campus-blue: #3d5fd4;">
                 Campus de centro de trabajo: Chiapa de Corzo, clave: 07PPL2420E, C.V.E. DSP 4500Z
             </div>
         </div>
@@ -219,10 +221,11 @@
             </div>
         </div>
 
-        <!-- Semestre 2 - SIN CAMBIOS (Tiene Imagen) -->
+        <!-- Semestre 2 - MODIFICADO: Contenedor y clases para fácil reemplazo de imagen -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
             <!-- Contenedor de Imagen -->
             <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
+                <!-- Por favor, reemplace la URL del src con la imagen deseada (idealmente 400x200 o similar) -->
                 <img src="https://placehold.co/400x200/CCCCCC/333333?text=IMAGEN+SEMESTRE+2" 
                      alt="Estudiante de enfermería en prácticas" 
                      class="semester-image"
@@ -249,10 +252,10 @@
             </div>
         </div>
 
-        <!-- Semestre 3 - MODIFICADO: Bloque Color al lado izquierdo -->
+        <!-- Semestre 3 - ANCHO 50% (Sin Imagen) -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-full flex flex-col lg:flex-row">
-                <!-- Bloque Color 50% (Izquierda) -->
+            <div class="lg:w-full flex flex-col lg:flex-row-reverse">
+                <!-- Bloque Color 50% -->
                 <div class="flex-shrink-0 bg-blue-2 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
                             lg:w-1/2 semestre-content-box">
                     <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">3</div>
@@ -260,7 +263,7 @@
                         TERCER SEMESTRE.
                     </div>
                 </div>
-                <!-- Contenido 50% (Derecha) -->
+                <!-- Contenido 50% -->
                 <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
                     <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
                         <li>Estrategias para el Diseño de Intervenciones de Enfermería.</li>
@@ -274,10 +277,11 @@
             </div>
         </div>
 
-        <!-- Semestre 4 - SIN CAMBIOS (Tiene Imagen) -->
+        <!-- Semestre 4 - MODIFICADO: Contenedor y clases para fácil reemplazo de imagen -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
             <!-- Contenedor de Imagen -->
             <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
+                <!-- Por favor, reemplace la URL del src con la imagen deseada (idealmente 400x200 o similar) -->
                 <img src="https://placehold.co/400x200/CCCCCC/333333?text=IMAGEN+SEMESTRE+4" 
                      alt="Enfermera sonriendo en un entorno médico" 
                      class="semester-image"
@@ -303,10 +307,10 @@
             </div>
         </div>
 
-        <!-- Semestre 5 - MODIFICADO: Bloque Color al lado izquierdo -->
+        <!-- Semestre 5 - ANCHO 50% (Sin Imagen) -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-full flex flex-col lg:flex-row">
-                <!-- Bloque Color 50% (Izquierda) -->
+            <div class="lg:w-full flex flex-col lg:flex-row-reverse">
+                <!-- Bloque Color 50% -->
                 <div class="flex-shrink-0 bg-blue-4 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
                             lg:w-1/2 semestre-content-box"> 
                     <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">5</div>
@@ -314,7 +318,7 @@
                         QUINTO SEMESTRE.
                     </div>
                 </div>
-                <!-- Contenido 50% (Derecha) -->
+                <!-- Contenido 50% -->
                 <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
                     <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
                         <li>Terapéutica para el Cuidado Holístico.</li>
@@ -327,10 +331,11 @@
             </div>
         </div>
 
-        <!-- Semestre 6 - SIN CAMBIOS (Tiene Imagen) -->
+        <!-- Semestre 6 - MODIFICADO: Contenedor y clases para fácil reemplazo de imagen -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
             <!-- Contenedor de Imagen -->
             <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
+                <!-- Por favor, reemplace la URL del src con la imagen deseada (idealmente 400x200 o similar) -->
                 <img src="https://placehold.co/400x200/CCCCCC/333333?text=IMAGEN+SEMESTRE+6" 
                      alt="Enfermera revisando documentos" 
                      class="semester-image"
@@ -357,10 +362,10 @@
             </div>
         </div>
 
-        <!-- Semestre 7 - MODIFICADO: Bloque Color al lado izquierdo -->
+        <!-- Semestre 7 - ANCHO 50% (Sin Imagen) -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-full flex flex-col lg:flex-row">
-                <!-- Bloque Color 50% (Izquierda) -->
+            <div class="lg:w-full flex flex-col lg:flex-row-reverse">
+                <!-- Bloque Color 50% -->
                 <div class="flex-shrink-0 bg-blue-5 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
                             lg:w-1/2 semestre-content-box">
                     <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">7</div>
@@ -368,7 +373,7 @@
                         SÉPTIMO SEMESTRE.
                     </div>
                 </div>
-                <!-- Contenido 50% (Derecha) -->
+                <!-- Contenido 50% -->
                 <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
                     <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
                         <li>Gestión del Cuidado.</li>
@@ -381,10 +386,11 @@
             </div>
         </div>
 
-        <!-- Semestre 8 - SIN CAMBIOS (Tiene Imagen) -->
+        <!-- Semestre 8 - MODIFICADO: Contenedor y clases para fácil reemplazo de imagen -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
             <!-- Contenedor de Imagen -->
             <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
+                <!-- Por favor, reemplace la URL del src con la imagen deseada (idealmente 400x200 o similar) -->
                 <img src="https://placehold.co/400x200/CCCCCC/333333?text=IMAGEN+SEMESTRE+8" 
                      alt="Joven estudiante en el campus" 
                      class="semester-image"
@@ -465,7 +471,7 @@
         <p>Col. Centro, Tuxtla Gutiérrez, Chiapas.</p>
         <p class="mt-2">
             <!-- Email con mailto: -->
-            <a href="mailto:admisisiones@isan.mx" class="font-semibold text-gray-700 hover:text-primary-blue transition duration-150">admisisiones@isan.mx</a> / 
+            <a href="mailto:admisiones@isan.mx" class="font-semibold text-gray-700 hover:text-primary-blue transition duration-150">admisiones@isan.mx</a> / 
             
             <!-- WhatsApp listo para enlace (usa la URL de WhatsApp con el número 52 + 9611389301) -->
             <a href="https://wa.me/529611389301" target="_blank" class="font-semibold text-gray-700 hover:text-primary-blue transition duration-150">WhatsApp +9611389301</a> / 
@@ -476,9 +482,9 @@
         <!-- Nueva sección de atribución y logo -->
         <div class="mt-4 pt-4 border-t border-gray-400">
             <p class="text-xs font-semibold mb-2">Realizado por:</p>
-            <a href="#" target="_blank" class="inline-block">
+            <a href="https://www.giomerida.dev" target="_blank" class="inline-block">
                 <!-- Placeholder para el logotipo -->
-                <img src="https://placehold.co/100x30/cecece/000000?text=Logo+Web" alt="Logo de la empresa de desarrollo web" class="h-8">
+                <img src="img/giodev_blk.png" alt="Giodev" class="h-8">
             </a>
         </div>
     </footer>
