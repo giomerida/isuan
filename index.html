@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Alexis Giovanni Mérida Arévalo - Giodev">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Superior Universitario - Licenciatura en Enfermería</title>
     <!-- Carga de Tailwind CSS -->
@@ -27,7 +26,7 @@
                         'green-form': '#6AA84F', // Verde para el botón de formulario
                         'gray-footer': '#cecece', // Gris claro nuevo
                         'campus-blue': '#3d5fd4',
-                        // Nuevos colores
+                        // Nuevos colores para el banner
                         'banner-main-blue': '#004482',
                         'banner-accent-teal': '#00949c',
                     },
@@ -43,20 +42,16 @@
         .hero-title {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
-        .header-bg {
-            /* Simulación del fondo con la imagen de la enfermera y el banner */
-            background-image: url('https://placehold.co/1200x500/003366/ffffff?text=Fondo+Instituto+Universitario');
+        .header-hero-bg {
+            /* Imagen de fondo ajustada a la proporción 1200x659 */
+            background-image: url('img/img_header_amado_nervo.png');
             background-size: cover;
-            background-position: center top;
+            background-position: center center;
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-        .header-top {
             width: 100%;
-            padding-top: 0;
-            z-index: 10;
+            /* Mantiene la proporción de la imagen 1200x659 de forma responsiva */
+            aspect-ratio: 1200 / 950;
+            max-height: 950px;
         }
         /* Contenedor del banner de Licenciatura */
         .banner-container {
@@ -69,7 +64,7 @@
             opacity: 1; 
             /* BORDES AJUSTADOS a 1.5rem */
             border-radius: 0 !important;
-            border-bottom-right-radius: 1.5rem !important; /* APLICANDO 1.5REM */
+            border-bottom-right-radius: 1.5rem !important; 
             
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
             display: flex; 
@@ -81,7 +76,6 @@
             width: 15%; 
             min-width: 20px;
             flex-shrink: 0;
-            /* Asegurar que las esquinas superiores e inferiores izquierdas sean rectas */
             border-radius: 0 !important;
         }
         .banner-content {
@@ -93,9 +87,8 @@
             flex-direction: column;
             justify-content: center;
             text-align: left;
-            /* Asegurar que las esquinas superiores derecha y inferior derecha sean rectas */
             border-radius: 0 !important;
-            border-bottom-right-radius: 1.5rem !important; /* APLICANDO 1.5REM */
+            border-bottom-right-radius: 1.5rem !important; 
         }
         @media (min-width: 640px) {
             .banner-container {
@@ -115,17 +108,15 @@
             }
         }
 
-        /* ESTILOS DE SEMESTRE REVERTIDOS A REDONDEO GENERAL PARA EVITAR CONFLICTOS */
+        /* ESTILOS DE SEMESTRE */
         .semestre-card {
-            border-radius: 0.5rem !important; /* Volver al redondeo original para los semestres */
+            border-radius: 0.5rem !important;
         }
         .semestre-content-box {
             border-radius: 0 !important; 
         }
-        /* Clase para el contenedor de la imagen del semestre */
         .semester-image-container {
             border-radius: 0 !important;
-            /* Establece una altura fija o mínima para el contenedor de la imagen en LG para coherencia */
             height: 150px; 
         }
         @media (min-width: 1024px) {
@@ -133,7 +124,6 @@
                 height: 100%; 
             }
         }
-        /* Clase para la imagen misma */
         .semester-image {
              width: 100%;
              height: 100%;
@@ -144,48 +134,49 @@
 </head>
 <body class="font-sans bg-white text-gray-800">
 
-    <!-- Encabezado y Banner Principal -->
-    <header class="header-bg h-[50vh] sm:h-[60vh] lg:h-[70vh] relative shadow-xl">
+    <!-- Encabezado -->
+    <header class="relative shadow-xl">
         
-        <!-- Contenedor del Logo, Nombre y Campus Info (Apilados) -->
-        <div class="header-top">
-            
-            <!-- Fila 1: Logo y Nombre de la Universidad (3 piezas) - Centrado en todas las pantallas -->
-            <div class="flex items-start sm:items-center justify-center space-x-3 sm:space-x-2 pb-1 text-white hero-title pt-4">
+        <!-- PARTE SUPERIOR: Logo y Nombre (Ahora con el mismo color institucional) -->
+        <div class="bg-primary-blue py-4">
+            <div class="flex items-center justify-center space-x-3">
                 <!-- Logo ISUAN -->
                 <img src="img/logo amado nervo.png" alt="Logo ISUAN" width="60" height="60" class="w-12 h-12 sm:w-16 sm:h-16 object-contain">
                 
-                <!-- Nombre de la Universidad -->
-                <div class="text-xs sm:text-sm font-bold leading-tight uppercase">
+                <!-- Nombre de la Universidad (Texto en blanco) -->
+                <div class="text-xs sm:text-sm font-bold leading-tight uppercase text-white">
                     <p>INSTITUTO</p>
                     <p>SUPERIOR</p>
                     <p>UNIVERSITARIO</p>
                     <p>AMADO NERVO</p>
                 </div>
             </div>
-            
-            <!-- Campus Info Bar -->
-            <div class="w-full text-center text-[10px] sm:text-xs py-2 bg-[--campus-blue] text-white font-semibold" style="--campus-blue: #3d5fd4;">
-                Campus de centro de trabajo: Chiapa de Corzo, clave: 07PPL2420E, C.V.E. DSP 4500Z
-            </div>
+        </div>
+        
+        <!-- Campus Info Bar (Azul intenso) -->
+        <div class="w-full text-center text-[10px] sm:text-xs py-2 bg-campus-blue text-white font-semibold">
+            Campus de centro de trabajo: Chiapa de Corzo, clave: 07PPL2420E, C.V.E. DSP 4500Z
         </div>
 
-        <!-- Banner de Título de la Licenciatura (BORDES AJUSTADOS A 1.5REM) -->
-        <div class="banner-container">
-            <!-- Barra Vertical de Acento (Teal) -->
-            <div class="banner-accent-bar"></div>
-            
-            <!-- Contenido del Banner (Azul Marino con 85% Opacidad) -->
-            <div class="banner-content">
-                <h1 class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-white hero-title uppercase tracking-wide text-left">
-                    LICENCIATURA EN ENFERMERÍA.
-                </h1>
-                <p class="text-sm sm:text-xl text-white font-medium mt-1 hero-title text-left">
-                    R.V.O.E. FEDERAL / 2022-2023
-                </p>
-                <p class="text-xs sm:text-lg text-white font-light mt-1 hero-title text-left">
-                    INICIO DE CICLO / FEBRERO 2026
-                </p>
+        <!-- SECCIÓN HERO CON IMAGEN DE FONDO -->
+        <div class="header-hero-bg">
+            <!-- Banner de Título de la Licenciatura -->
+            <div class="banner-container">
+                <!-- Barra Vertical de Acento (Teal) -->
+                <div class="banner-accent-bar"></div>
+                
+                <!-- Contenido del Banner (Azul Marino con 85% Opacidad) -->
+                <div class="banner-content">
+                    <h1 class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-white hero-title uppercase tracking-wide text-left">
+                        LICENCIATURA EN ENFERMERÍA.
+                    </h1>
+                    <p class="text-sm sm:text-xl text-white font-medium mt-1 hero-title text-left">
+                        R.V.O.E. FEDERAL / 2022-2023
+                    </p>
+                    <p class="text-xs sm:text-lg text-white font-light mt-1 hero-title text-left">
+                        INICIO DE CICLO / FEBRERO 2026
+                    </p>
+                </div>
             </div>
         </div>
     </header>
