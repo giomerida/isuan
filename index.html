@@ -132,6 +132,31 @@
              object-fit: cover;
              border-radius: 0 !important;
         }
+
+         /* BOTON PARA SUBIR */
+        #scrollTopBtn {
+         position: fixed;
+         bottom: 25px;
+         right: 25px;
+         width: 45px;
+         height: 45px;
+         border: none;
+         border-radius: 50%;
+         background-color: #004482;
+         color: #fff;
+         font-size: 22px;
+         cursor: pointer;
+         display: none;
+         align-items: center;
+         justify-content: center;
+         z-index: 999;
+         transition: opacity 0.3s ease, transform 0.3s ease;
+       }
+
+#scrollTopBtn:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+} 
     </style>
 </head>
 <body class="font-sans bg-white text-gray-800">
@@ -477,6 +502,29 @@
             </a>
         </div>
     </footer>
+
+<button id="scrollTopBtn" aria-label="Subir">
+  ↑
+</button>
+
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.style.display = "flex";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 </body>
 </html>
