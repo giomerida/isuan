@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const telefono = document.getElementById("telefono").value.trim();
     const mensaje = document.getElementById("mensaje").value.trim();
 
-    const numeroWhatsApp = "5219611389301"; // CAMBIA ESTE NÚMERO
+    const numeroWhatsApp = "5219612950117"; // CAMBIA ESTE NÚMERO
 
     let texto =
 `Nuevo registro de información
