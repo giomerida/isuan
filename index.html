@@ -174,13 +174,6 @@
       >
       </div>
      </div>
-        
-        <!-- Campus Info Bar (Azul intenso) 
-        <div class="w-full text-center 
-            text-[12px] sm:text-[14px] md:text-[16px]
-            py-2 bg-campus-blue text-white font-semibold">
-            Campus de Centro de Trabajo: Chiapa de Corzo, Clave: 07PPL2420E, C.V.E. DSP 4500Z
-        </div> -->
 
         <!-- SECCIÓN HERO CON IMAGEN DE FONDO -->
         <div class="header-hero-bg">
@@ -237,34 +230,42 @@
         </div>
 
         <!-- Semestre 2 - SIN CAMBIOS (Tiene Imagen) -->
-        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <!-- Contenedor de Imagen -->
-            <div class="lg:w-1/3 flex-shrink-0 semester-image-container">
-                <img src="img/img_semestre_2.png" 
-                     alt="Estudiante de enfermería en prácticas" 
-                     class="semester-image"
-                     onerror="this.onerror=null;this.src='https://placehold.co/400x200/CCCCCC/333333?text=FOTO+REEMPLAZO';">
-            </div>
-            <div class="lg:w-2/3 flex flex-col lg:flex-row">
-                <div class="flex-shrink-0 bg-blue-1 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
-                            lg:w-48 xl:w-56 semestre-content-box">
-                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">2</div>
-                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
-                        SEGUNDO SEMESTRE.
-                    </div>
-                </div>
-                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-auto semestre-content-box right-content">
-                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
-                        <li>Fundamentos de Enfermería.</li>
-                        <li>Historia de la Enfermería en México.</li>
-                        <li>Desarrollo Humano Integral.</li>
-                        <li>Epidemiología y Saneamiento de la Salud.</li>
-                        <li>Anatomía y Fisiología II.</li>
-                        <li>Inglés II.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+
+  <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr_2fr]">
+
+    <!-- Imagen (25%) -->
+    <div class="h-full">
+      <img 
+        src="img/img_semestre_2.png"
+        alt="Estudiante de enfermería en prácticas"
+        class="w-full h-full object-cover"
+        onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/333333?text=FOTO+REEMPLAZO';">
+    </div>
+
+    <!-- Cuadro Azul (25% = igual al naranja) -->
+    <div class="bg-blue-1 flex flex-col items-center justify-center 
+                p-6 text-center">
+      <div class="text-5xl sm:text-6xl font-black text-white mb-1">2</div>
+      <div class="text-white text-base sm:text-lg font-bold">
+        SEGUNDO SEMESTRE.
+      </div>
+    </div>
+
+    <!-- Lista (50%) -->
+    <div class="p-6 flex items-center">
+      <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+        <li>Fundamentos de Enfermería.</li>
+        <li>Historia de la Enfermería en México.</li>
+        <li>Desarrollo Humano Integral.</li>
+        <li>Epidemiología y Saneamiento de la Salud.</li>
+        <li>Anatomía y Fisiología II.</li>
+        <li>Inglés II.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
 
         <!-- Semestre 3 - MODIFICADO: Bloque Color al lado izquierdo -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
