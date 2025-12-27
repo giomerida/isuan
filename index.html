@@ -205,31 +205,48 @@
 
         <!-- Semestre 1 - Diseño interno estándar y ancho 50% (Sin Imagen) -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <!-- Bloque de Número y Título (Ancho 50%) -->
-            <div class="flex-shrink-0 bg-orange-accent flex flex-row lg:flex-col items-center justify-center 
-                        p-4 sm:p-6 lg:p-8 w-full 
-                        lg:w-1/2 semestre-content-box"> 
-                <!-- Número (Grande, centrado) -->
-                <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">1</div>
-                <!-- Título (Centrado, una sola línea) -->
-                <div class="text-white text-base sm:text-lg font-bold text-center px-2">
-                    PRIMER SEMESTRE.
-                </div>
+
+    <!-- BLOQUE NARANJA (50%) -->
+    <div class="bg-orange-accent w-full lg:w-1/2 
+                flex items-center justify-center 
+                p-6 sm:p-8 lg:p-12">
+
+        <div class="flex items-center w-full max-w-lg">
+
+            <!-- Número -->
+            <div class="text-white font-black leading-none 
+                        text-7xl sm:text-8xl lg:text-9xl">
+                1
             </div>
-            <!-- Contenido del Semestre (Ancho 50%) -->
-            <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
-                <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
-                    <li>Legislación en Enfermería.</li>
-                    <li>Sociología de la Salud.</li>
-                    <li>Bioquímica y Nutrición.</li>
-                    <li>Comunicación en el área de la salud.</li>
-                    <li>Filosofía de la Enfermería.</li>
-                    <li>Psicología y Desarrollo de la Persona.</li>
-                    <li>Anatomía y Fisiología I.</li>
-                    <li>Inglés I.</li>
-                </ul>
+
+            <!-- Línea -->
+            <div class="mx-6 h-24 w-[2px] bg-white/80"></div>
+
+            <!-- Texto -->
+            <div class="text-white font-extrabold uppercase 
+                        text-xl sm:text-2xl lg:text-3xl leading-tight">
+                PRIMER<br>
+                SEMESTRE.
             </div>
+
         </div>
+    </div>
+
+    <!-- LISTA (50%) -->
+    <div class="w-full lg:w-1/2 p-6 sm:p-8 flex items-center">
+        <ul class="list-disc ml-5 space-y-2 text-sm sm:text-base">
+            <li>Legislación en Enfermería.</li>
+            <li>Sociología de la Salud.</li>
+            <li>Bioquímica y Nutrición.</li>
+            <li>Comunicación en el área de la salud.</li>
+            <li>Filosofía de la Enfermería.</li>
+            <li>Psicología y Desarrollo de la Persona.</li>
+            <li>Anatomía y Fisiología I.</li>
+            <li>Inglés I.</li>
+        </ul>
+    </div>
+
+</div>
 
         <!-- Semestre 2 - SIN CAMBIOS (Tiene Imagen) -->
         <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
@@ -245,12 +262,27 @@
         onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/333333?text=FOTO+REEMPLAZO';">
     </div>
 
-    <!-- Cuadro Azul (25% = igual al naranja) -->
-    <div class="bg-blue-1 flex flex-col items-center justify-center 
-                p-6 text-center">
-      <div class="text-5xl sm:text-6xl font-black text-white mb-1">2</div>
-      <div class="text-white text-base sm:text-lg font-bold">
-        SEGUNDO SEMESTRE.
+    <!-- Bloque Azul (25%) -->
+    <div class="bg-blue-1 flex items-center justify-center p-6">
+
+      <div class="flex items-center w-full max-w-xs">
+
+        <!-- Número -->
+        <div class="text-white font-black leading-none 
+                    text-6xl sm:text-7xl lg:text-8xl">
+          2
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="mx-4 h-20 w-[2px] bg-white/80"></div>
+
+        <!-- Texto -->
+        <div class="text-white font-extrabold uppercase 
+                    text-sm sm:text-base lg:text-lg leading-tight">
+          SEGUNDO<br>
+          SEMESTRE.
+        </div>
+
       </div>
     </div>
 
@@ -271,18 +303,35 @@
 
         <!-- Semestre 3 - MODIFICADO: Bloque Color al lado izquierdo -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-full flex flex-col lg:flex-row">
-                <!-- Bloque Color 50% (Izquierda) -->
-                <div class="flex-shrink-0 bg-blue-2 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
-                            lg:w-1/2 semestre-content-box">
-                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">3</div>
-                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
-                        TERCER SEMESTRE.
-                    </div>
-                </div>
+
+    <!-- BLOQUE AZUL (50%) -->
+    <div class="bg-blue-2 w-full lg:w-1/2 
+                flex items-center justify-center 
+                p-6 sm:p-8 lg:p-12">
+
+        <div class="flex items-center w-full max-w-lg">
+
+            <!-- Número -->
+            <div class="text-white font-black leading-none 
+                        text-7xl sm:text-8xl lg:text-9xl">
+                3
+            </div>
+
+            <!-- Línea -->
+            <div class="mx-6 h-24 w-[2px] bg-white/80"></div>
+
+            <!-- Texto -->
+            <div class="text-white font-extrabold uppercase 
+                        text-xl sm:text-2xl lg:text-3xl leading-tight">
+                TERCER<br>
+                SEMESTRE.
+            </div>
+
+        </div>
+    </div>
                 <!-- Contenido 50% (Derecha) -->
-                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
-                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                <div class="w-full lg:w-1/2 p-6 sm:p-8 flex items-center">
+                    <ul class="list-disc ml-5 space-y-2 text-sm sm:text-base">
                         <li>Estrategias para el Diseño de Intervenciones de Enfermería.</li>
                         <li>Enfermería Clínica.</li>
                         <li>Medicina Preventiva y Curativa.</li>
@@ -308,12 +357,27 @@
         onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/333333?text=FOTO+REEMPLAZO';">
     </div>
 
-    <!-- Cuadro Azul (25%) -->
-    <div class="bg-blue-3 flex flex-col items-center justify-center 
-                p-6 text-center">
-      <div class="text-5xl sm:text-6xl font-black text-white mb-1">4</div>
-      <div class="text-white text-base sm:text-lg font-bold">
-        CUARTO SEMESTRE.
+    <!-- Bloque Azul (25%) -->
+    <div class="bg-blue-3 flex items-center justify-center p-6">
+
+      <div class="flex items-center w-full max-w-xs">
+
+        <!-- Número -->
+        <div class="text-white font-black leading-none 
+                    text-6xl sm:text-7xl lg:text-8xl">
+          4
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="mx-4 h-20 w-[2px] bg-white/80"></div>
+
+        <!-- Texto -->
+        <div class="text-white font-extrabold uppercase 
+                    text-sm sm:text-base lg:text-lg leading-tight">
+          CUARTO<br>
+          SEMESTRE.
+        </div>
+
       </div>
     </div>
 
@@ -333,18 +397,35 @@
 
         <!-- Semestre 5 - MODIFICADO: Bloque Color al lado izquierdo -->
         <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-full flex flex-col lg:flex-row">
-                <!-- Bloque Color 50% (Izquierda) -->
-                <div class="flex-shrink-0 bg-blue-4 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
-                            lg:w-1/2 semestre-content-box"> 
-                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">5</div>
-                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
-                        QUINTO SEMESTRE.
-                    </div>
-                </div>
+
+    <!-- BLOQUE AZUL (50%) -->
+    <div class="bg-blue-4 w-full lg:w-1/2 
+                flex items-center justify-center 
+                p-6 sm:p-8 lg:p-12">
+
+        <div class="flex items-center w-full max-w-lg">
+
+            <!-- Número -->
+            <div class="text-white font-black leading-none 
+                        text-7xl sm:text-8xl lg:text-9xl">
+                5
+            </div>
+
+            <!-- Línea -->
+            <div class="mx-6 h-24 w-[2px] bg-white/80"></div>
+
+            <!-- Texto -->
+            <div class="text-white font-extrabold uppercase 
+                        text-xl sm:text-2xl lg:text-3xl leading-tight">
+                QUINTO<br>
+                SEMESTRE.
+            </div>
+
+        </div>
+    </div>
                 <!-- Contenido 50% (Derecha) -->
-                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
-                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                <div class="w-full lg:w-1/2 p-6 sm:p-8 flex items-center">
+                    <ul class="list-disc ml-5 space-y-2 text-sm sm:text-base">
                         <li>Terapéutica para el Cuidado Holístico.</li>
                         <li>Enfermería Pediátrica.</li>
                         <li>Medicina de Urgencias.</li>
@@ -369,12 +450,27 @@
         onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/333333?text=FOTO+REEMPLAZO';">
     </div>
 
-    <!-- Cuadro Naranja (25%) -->
-    <div class="bg-orange-2 flex flex-col items-center justify-center 
-                p-6 text-center">
-      <div class="text-5xl sm:text-6xl font-black text-white mb-1">6</div>
-      <div class="text-white text-base sm:text-lg font-bold">
-        SEXTO SEMESTRE.
+    <!-- Bloque Naranja (25%) -->
+    <div class="bg-orange-2 flex items-center justify-center p-6">
+
+      <div class="flex items-center w-full max-w-xs">
+
+        <!-- Número -->
+        <div class="text-white font-black leading-none 
+                    text-6xl sm:text-7xl lg:text-8xl">
+          6
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="mx-4 h-20 w-[2px] bg-white/80"></div>
+
+        <!-- Texto -->
+        <div class="text-white font-extrabold uppercase 
+                    text-sm sm:text-base lg:text-lg leading-tight">
+          SEXTO<br>
+          SEMESTRE.
+        </div>
+
       </div>
     </div>
 
@@ -394,19 +490,36 @@
 </div>
 
         <!-- Semestre 7 - MODIFICADO: Bloque Color al lado izquierdo -->
-        <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
-            <div class="lg:w-full flex flex-col lg:flex-row">
-                <!-- Bloque Color 50% (Izquierda) -->
-                <div class="flex-shrink-0 bg-blue-5 flex flex-row lg:flex-col items-center justify-center p-2 lg:p-4 w-full 
-                            lg:w-1/2 semestre-content-box">
-                    <div class="text-5xl sm:text-6xl font-black text-white px-2 lg:mb-1">7</div>
-                    <div class="text-white text-base sm:text-lg font-bold text-center px-2">
-                        SÉPTIMO SEMESTRE.
-                    </div>
-                </div>
+       <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl semestre-card">
+
+    <!-- BLOQUE AZUL (50%) -->
+    <div class="bg-blue-5 w-full lg:w-1/2 
+                flex items-center justify-center 
+                p-6 sm:p-8 lg:p-12">
+
+        <div class="flex items-center w-full max-w-lg">
+
+            <!-- Número -->
+            <div class="text-white font-black leading-none 
+                        text-7xl sm:text-8xl lg:text-9xl">
+                7
+            </div>
+
+            <!-- Línea divisoria -->
+            <div class="mx-6 h-24 w-[2px] bg-white/80"></div>
+
+            <!-- Texto -->
+            <div class="text-white font-extrabold uppercase 
+                        text-xl sm:text-2xl lg:text-3xl leading-tight">
+                SÉPTIMO<br>
+                SEMESTRE.
+            </div>
+
+        </div>
+    </div>
                 <!-- Contenido 50% (Derecha) -->
-                <div class="p-4 sm:p-6 lg:p-8 flex-grow lg:flex-1 lg:w-1/2 semestre-content-box right-content"> 
-                    <ul class="list-disc ml-5 space-y-1 text-sm sm:text-base">
+                <div class="w-full lg:w-1/2 p-6 sm:p-8 flex items-center">
+                    <ul class="list-disc ml-5 space-y-2 text-sm sm:text-base">
                         <li>Gestión del Cuidado.</li>
                         <li>Enfermería Tanatológica.</li>
                         <li>Enfermería Geriátrica.</li>
@@ -431,12 +544,27 @@
         onerror="this.onerror=null;this.src='https://placehold.co/400x400/CCCCCC/333333?text=FOTO+REEMPLAZO';">
     </div>
 
-    <!-- Cuadro Azul (25%) -->
-    <div class="bg-blue-6 flex flex-col items-center justify-center 
-                p-6 text-center">
-      <div class="text-5xl sm:text-6xl font-black text-white mb-1">8</div>
-      <div class="text-white text-base sm:text-lg font-bold">
-        OCTAVO SEMESTRE.
+    <!-- Bloque Azul (25%) -->
+    <div class="bg-blue-6 flex items-center justify-center p-6">
+
+      <div class="flex items-center w-full max-w-xs">
+
+        <!-- Número -->
+        <div class="text-white font-black leading-none 
+                    text-6xl sm:text-7xl lg:text-8xl">
+          8
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="mx-4 h-20 w-[2px] bg-white/80"></div>
+
+        <!-- Texto -->
+        <div class="text-white font-extrabold uppercase 
+                    text-sm sm:text-base lg:text-lg leading-tight">
+          OCTAVO<br>
+          SEMESTRE.
+        </div>
+
       </div>
     </div>
 
