@@ -45,13 +45,13 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .header-hero-bg {
-            /* Imagen de fondo ajustada a la proporción 1200x659 */
+            /* Imagen de fondo ajustada a la proporción 1200x950 */
             background-image: url('img/img_header_amado_nervo.png');
             background-size: cover;
             background-position: center center;
             position: relative;
             width: 100%;
-            /* Mantiene la proporción de la imagen 1200x659 de forma responsiva */
+            /* Proporción de la imagen 1200x950 de forma responsiva */
             aspect-ratio: 1200 / 950;
             max-height: 950px;
         }
@@ -82,7 +82,7 @@
         }
         .banner-content {
             /* Fondo azul marino con opacidad */
-            background-color: rgba(0, 68, 130, 0.85); /* #004482 @ 85% opacity */
+            background-color: rgba(0, 68, 130, 0.80); /* #004482 @ 85% opacity */
             padding: 1.5rem 2rem;
             flex-grow: 1;
             display: flex;
@@ -164,21 +164,16 @@
     <!-- Encabezado -->
     <header class="relative shadow-xl">
         
-        <!-- PARTE SUPERIOR: Logo y Nombre (Ahora con el mismo color institucional) -->
-        <div class="bg-primary-blue py-4">
-            <div class="flex items-center justify-center space-x-3">
-                <!-- Logo ISUAN -->
-                <img src="img/logo amado nervo.png" alt="Logo ISUAN" class="w-10 sm:w-16 h-auto object-contain">
-                
-                <!-- Nombre de la Universidad (Texto en blanco) -->
-                <div class="text-xs sm:text-sm font-bold leading-tight uppercase text-white">
-                    <p>INSTITUTO</p>
-                    <p>SUPERIOR</p>
-                    <p>UNIVERSITARIO</p>
-                    <p>AMADO NERVO</p>
-                </div>
-            </div>
-        </div>
+    <!-- PARTE SUPERIOR: Logo centrado -->
+     <div class="bg-primary-blue py-4">
+     <div class="flex justify-center">
+     <img 
+      src="img/logo completo isuan.png" 
+      alt="Logo ISUAN" 
+      class="w-20 sm:w-28 md:w-32 h-auto object-contain"
+      >
+      </div>
+     </div>
         
         <!-- Campus Info Bar (Azul intenso) 
         <div class="w-full text-center 
@@ -497,7 +492,7 @@
             <a href="mailto:admisisiones@isan.mx" class="font-semibold text-gray-700 hover:text-primary-blue transition duration-150">admisisiones@isan.mx</a> / 
             
             <!-- WhatsApp listo para enlace (usa la URL de WhatsApp con el número 52 + 9611389301) -->
-            <a href="https://wa.me/5219611389301" target="_blank" class="font-semibold text-gray-700 hover:text-primary-blue transition duration-150">WhatsApp +9611389301</a> / 
+            <a href="https://wa.me/5219611389301" target="_blank" class="font-semibold text-gray-700 hover:text-primary-blue transition duration-150">WhatsApp +9611389301</a> <!-- / -->
             
             <!-- <span class="font-semibold">Lic. Julissa Gordillo</span> -->
         </p>
