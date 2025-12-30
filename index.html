@@ -55,58 +55,38 @@
             aspect-ratio: 1200 / 950;
             max-height: 750px;
         }
-        /* Contenedor del banner de Licenciatura */
+        /* AJUSTE: Banner ahora a todo el ancho y pegado al fondo */
         .banner-container {
             position: absolute;
-            bottom: 30px; 
-            left: 50%;
-            transform: translateX(-50%); 
-            width: 90%; 
-            max-width: 900px; 
+            bottom: 0; 
+            left: 0;
+            width: 100%; 
             opacity: 1; 
-            /* BORDES AJUSTADOS a 1.5rem */
+            /* BORDES ELIMINADOS */
             border-radius: 0 !important;
-            border-bottom-right-radius: 1.5rem !important; 
-            
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3); 
             display: flex; 
-            overflow: hidden; 
             height: fit-content;
-        }
-        .banner-accent-bar {
-            background-color: #00949c; /* Azul teal */
-            width: 15%; 
-            min-width: 20px;
-            flex-shrink: 0;
-            border-radius: 0 !important;
         }
         .banner-content {
             /* Fondo azul marino con opacidad */
-            background-color: rgba(0, 68, 130, 0.80); /* #004482 @ 85% opacity */
-            padding: 1.5rem 2rem;
-            flex-grow: 1;
+            background-color: rgba(0, 68, 130, 0.85); /* #004482 @ 85% opacity */
+            padding: 1rem 1.5rem;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: left;
             border-radius: 0 !important;
-            border-bottom-right-radius: 1.5rem !important; 
         }
         @media (min-width: 640px) {
-            .banner-container {
-                width: 75%;
-                bottom: 40px;
+            .banner-content {
+                padding: 1.5rem 3rem;
             }
         }
         @media (min-width: 1024px) {
-            .banner-container {
-                width: 60%;
-                bottom: 50px;
-            }
-        }
-        @media (min-width: 768px) {
-            .banner-accent-bar {
-                width: 5%;
+            .banner-content {
+                padding: 2rem 10%; /* Más aire lateral en pantallas grandes */
             }
         }
 
@@ -170,32 +150,27 @@
      <img 
       src="img/isuan logo.png" 
       alt="Logo ISUAN" 
-      class="w-20 sm:w-30 md:w-32 h-auto object-contain"
+      class="w-20 sm:w-26 md:w-32 h-auto object-contain"
       >
       </div>
      </div>
 
         <!-- SECCIÓN HERO CON IMAGEN DE FONDO -->
         <div class="header-hero-bg">
-            <!-- Banner de Título de la Licenciatura -->
+            <!-- Banner de Título de la Licenciatura (A todo el ancho y pegado abajo) -->
             <div class="banner-container">
-                <!-- Barra Vertical de Acento (Teal) -->
-                <div class="banner-accent-bar"></div>
-                
                 <!-- Contenido del Banner (Azul Marino con 85% Opacidad) -->
-                <div class="banner-content py-10 sm:py-12 px-6 space-y-2">
-    <h1 class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-white uppercase tracking-wide text-left">
-        LICENCIATURA EN ENFERMERÍA.
-    </h1>
-
-    <p class="text-sm sm:text-xl text-white font-medium text-left">
-        R.V.O.E. FEDERAL / 2022-2023
-    </p>
-
-    <p class="text-xs sm:text-lg text-white font-light text-left">
-        INICIO DE CICLO / FEBRERO 2026
-    </p>
-</div>
+                <div class="banner-content">
+                    <h1 class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-white hero-title uppercase tracking-wide text-left">
+                        LICENCIATURA EN ENFERMERÍA.
+                    </h1>
+                    <p class="text-sm sm:text-xl text-white font-medium mt-1 hero-title text-left">
+                        R.V.O.E. FEDERAL / 2022-2023
+                    </p>
+                    <p class="text-xs sm:text-lg text-white font-light mt-1 hero-title text-left">
+                        INICIO DE CICLO / FEBRERO 2026
+                    </p>
+                </div>
             </div>
         </div>
     </header>
