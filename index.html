@@ -68,6 +68,17 @@
             display: flex; 
             height: fit-content;
         }
+
+        /* AJUSTE: Logotipo flotante sobre el fondo */
+        .floating-logo-container {
+            position: absolute;
+            top: 60%; /* Aproximadamente a la mitad/arriba */
+            transform: translateY(-50%);
+            /* Alineación horizontal base (coincidiendo con el padding del banner inferior) */
+            left: 12rem; 
+            z-index: 20;
+        } 
+
         .banner-content {
             /* Fondo azul marino con opacidad */
             background-color: rgba(0, 68, 130, 0.85); /* #004482 @ 85% opacity */
@@ -157,6 +168,12 @@
 
         <!-- SECCIÓN HERO CON IMAGEN DE FONDO -->
         <div class="header-hero-bg">
+
+            <!-- LOGOTIPO FLOTANTE: Alineado con el texto inferior, a media altura -->
+            <div class="floating-logo-container">
+                <img src="img/isuan logo.png" alt="Logotipo Institucional" class="h-16 sm:h-24 lg:h-32 w-auto object-contain drop-shadow-lg">
+            </div>
+
             <!-- Banner de Título de la Licenciatura (A todo el ancho y pegado abajo) -->
             <div class="banner-container">
                 <!-- Contenido del Banner (Azul Marino con 85% Opacidad) -->
