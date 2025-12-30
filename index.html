@@ -79,6 +79,12 @@
             z-index: 20;
         } 
 
+        .logo-responsive {
+  width: auto;
+  height: auto;
+  max-height: 180px; /* DESKTOP – tamaño máximo real */
+}
+
         .banner-content {
             /* Fondo azul marino con opacidad */
             background-color: rgba(0, 68, 130, 0.85); /* #004482 @ 85% opacity */
@@ -100,6 +106,24 @@
                 padding: 2rem 10%; /* Más aire lateral en pantallas grandes */
             }
         }
+
+        @media (max-width: 1024px) {
+  .logo-responsive {
+    max-height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-responsive {
+    max-height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-responsive {
+    max-height: 90px;
+  }
+}
 
         /* ESTILOS DE SEMESTRE */
         .semestre-card {
@@ -171,7 +195,7 @@
 
             <!-- LOGOTIPO FLOTANTE: Alineado con el texto inferior, a media altura -->
             <div class="floating-logo-container">
-                <img src="img/isuan logo.png" alt="Logotipo Institucional" class="h-16 sm:h-24 lg:h-32 w-auto object-contain drop-shadow-lg">
+                <img src="img/isuan logo.png" class="logo-responsive"/>
             </div>
 
             <!-- Banner de Título de la Licenciatura (A todo el ancho y pegado abajo) -->
