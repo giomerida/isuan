@@ -685,46 +685,48 @@
         </div>
     </footer>
 
-<!-- Icono de Subir -->
-<button id="scrollTopBtn" aria-label="Subir">
-  ↑
-</button>
+    <!-- Icono de Subir -->
+    <button id="scrollTopBtn" aria-label="Subir">
+     ↑
+    </button>
 
-<script>
-  const scrollTopBtn = document.getElementById("scrollTopBtn");
+    <script>
+       const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollTopBtn.style.display = "flex";
-    } else {
-      scrollTopBtn.style.display = "none";
-    }
-  });
+       window.addEventListener("scroll", () => {
+         if (window.scrollY > 300) {
+         scrollTopBtn.style.display = "flex";
+         } else {
+         scrollTopBtn.style.display = "none";
+      }
+      });
 
-  scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-</script>
+       scrollTopBtn.addEventListener("click", () => {
+         window.scrollTo({
+         top: 0,
+         behavior: "smooth"
+        });
+      });
+    </script>
 
-<!-- Icono WhatsApp -->
-<a
-  href="https://wa.me/5219611389301?text=Hola%20me%20gustaría%20recibir%20más%20información"
-  target="_blank"
-  aria-label="WhatsApp"
-  class="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full 
+    <!-- Icono WhatsApp -->
+     <a
+       href="https://wa.me/5219611389301?text=Hola%20me%20gustaría%20recibir%20más%20información"
+       target="_blank"
+       aria-label="WhatsApp"
+       class="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full 
          bg-green-500 text-white 
          flex items-center justify-center
          shadow-lg transition-all duration-300
          hover:bg-green-600 hover:-translate-y-1 animate-pulse">
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor"
        class="h-7 w-7">
-    <path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.734 5.568 2.125 8.012L.034 32l8.164-2.066A15.89 15.89 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.51 0-4.957-.676-7.083-1.958l-.507-.3-4.846 1.227 1.296-4.73-.33-.485A13.23 13.23 0 012.667 16C2.667 8.64 8.64 2.667 16 2.667S29.333 8.64 29.333 16 23.36 29.333 16 29.333zm7.17-9.17c-.392-.196-2.32-1.146-2.68-1.276-.36-.13-.622-.196-.883.196-.262.392-1.016 1.276-1.246 1.54-.23.262-.458.295-.85.098-.392-.196-1.654-.61-3.15-1.946-1.164-1.038-1.95-2.322-2.18-2.714-.23-.392-.025-.603.173-.8.176-.175.392-.458.588-.687.196-.23.262-.392.392-.654.13-.262.065-.49-.033-.687-.098-.196-.883-2.13-1.21-2.92-.318-.764-.64-.66-.883-.673-.23-.01-.49-.012-.752-.012-.262 0-.687.098-1.048.49-.36.392-1.376 1.344-1.376 3.277 0 1.932 1.41 3.8 1.606 4.06.196.262 2.78 4.245 6.734 5.955.94.406 1.673.648 2.245.83.943.3 1.8.258 2.478.157.756-.112 2.32-.95 2.647-1.868.327-.916.327-1.7.23-1.868-.098-.164-.36-.262-.752-.458z"/>
-  </svg>
-</a>
-<script src="https://giomerida.github.io/isuan/main.js"></script>
+     <path d="M16 0C7.163 0 0 7.163 0 16c0 2.82.734 5.568 2.125 8.012L.034 32l8.164-2.066A15.89 15.89 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.51 0-4.957-.676-7.083-1.958l-.507-.3-4.846 1.227 1.296-4.73-.33-.485A13.23 13.23 0 012.667 16C2.667 8.64 8.64 2.667 16 2.667S29.333 8.64 29.333 16 23.36 29.333 16 29.333zm7.17-9.17c-.392-.196-2.32-1.146-2.68-1.276-.36-.13-.622-.196-.883.196-.262.392-1.016 1.276-1.246 1.54-.23.262-.458.295-.85.098-.392-.196-1.654-.61-3.15-1.946-1.164-1.038-1.95-2.322-2.18-2.714-.23-.392-.025-.603.173-.8.176-.175.392-.458.588-.687.196-.23.262-.392.392-.654.13-.262.065-.49-.033-.687-.098-.196-.883-2.13-1.21-2.92-.318-.764-.64-.66-.883-.673-.23-.01-.49-.012-.752-.012-.262 0-.687.098-1.048.49-.36.392-1.376 1.344-1.376 3.277 0 1.932 1.41 3.8 1.606 4.06.196.262 2.78 4.245 6.734 5.955.94.406 1.673.648 2.245.83.943.3 1.8.258 2.478.157.756-.112 2.32-.95 2.647-1.868.327-.916.327-1.7.23-1.868-.098-.164-.36-.262-.752-.458z"/>
+     </svg>
+     </a>
+
+     <script src="https://giomerida.github.io/isuan/main.js"></script>
+     
 </body>
 </html>
