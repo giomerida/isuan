@@ -46,15 +46,15 @@ Esta página forma parte de la estrategia de captación de ISUAN, funcionando co
 
 ### 🏠 Encabezado con logo institucional
 
-![Header](assets/screenshots/header.png)
+![Header](img/capturas/captura%20header.png)
 
 ### 📖 Plan de estudios por semestre
 
-![Plan de estudios](assets/screenshots/plan-estudios.png)
+![Plan de estudios](img/capturas/captura%20semestres.png)
 
 ### 📝 Formulario de registro
 
-![Formulario](assets/screenshots/formulario.png)
+![Formulario](img/capturas/captura%20formularios.png)
 
 ---
 
